@@ -11,19 +11,19 @@ public class Book {
         this.pages = pages;
     }
 
-    public String isBig() {
+    public boolean isBig() {
         if (pages > 500) {
-            return "Да";
+            return true;
         } else {
-            return "Нет";
+            return false;
         }
     }
 
-    public String matches(String word) {
+    public boolean matches(String word) {
         if (title.contains(word) || author.contains(word)) {
-            return "Да";
+            return true;
         } else {
-            return "Нет";
+            return false;
         }
     }
 
