@@ -32,7 +32,7 @@ public class ToDoList {
     //2. Показать дела
     public static void showTasks() {
         System.out.println();
-        if (tasks.size() != 0) {
+        if (tasks.isEmpty()) {
             System.out.println("Ваш список дел:");
             for (int i = 0; i < tasks.size(); i++) {
                 System.out.printf("%d. %s\n", i + 1, tasks.get(i));
@@ -46,7 +46,7 @@ public class ToDoList {
     //3. Удалить дело по номеру
     public static void removeByNumber() {
         System.out.println();
-        if (tasks.size() != 0) {
+        if (tasks.isEmpty()) {
             System.out.print("Введите номер задачи: ");
             int pos = Integer.parseInt(console.nextLine()) - 1;
             if (pos >= 0 && pos < tasks.size()) {
@@ -63,7 +63,7 @@ public class ToDoList {
     //4. Удалить дело по названию
     public static void removeByName() {
         System.out.println();
-        if (tasks.size() != 0) {
+        if (tasks.isEmpty()) {
             System.out.print("Введите название задачи: ");
             String str = console.nextLine();
             if (tasks.contains(str)) {
